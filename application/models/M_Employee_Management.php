@@ -12,17 +12,17 @@ class M_Employee_Management extends CI_Model{
         $this->db->select('employee_number');
         $this->db->select('employee_id');
         $this->db->from('employee');
-        return $this->db->get()->result_array();
+        return $this->db->get()->result_array();   
     }
     
     public function fetchAccessRoles(){
         $this->db->select('access_role_id');
-        $this->db->select('access_role_name');
+        $this->db->select('access_role_name'); 
         $this->db->from('access_role');
         return $this->db->get()->result_array();
     }
 
-    public function employeeCreate($employee_id, $access_role_id, $password)
+    public function employeeCreate($employee_id, $access_role_id, $password,$employee_number,$first_name,$middle_name,$last_name)
     {
         
         $data = array(
@@ -31,7 +31,13 @@ class M_Employee_Management extends CI_Model{
             'password' => $password
 
         );
-    
+        $data1 = array(
+            'employee_number' => $employee_number,
+            'first_name' => $first_name,
+            'middle_name' => $middle_name,
+            'last_name' => $last_name
+        );
         $this->db->insert('employee_user', $data);
+        $this->db->insert('employee', $data1);
     }
 }

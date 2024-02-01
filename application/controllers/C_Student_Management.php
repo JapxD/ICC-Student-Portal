@@ -8,9 +8,9 @@ class C_Student_Management extends CI_Controller {
         $this->load->model('M_Student_Management');
     }
 
-	public function index()
+	public function index() 
 	{
-        $student_list = $this->M_Student_Management->fetchStudent();
+        $student_list = $this->M_Student_Management->fetchStudent(); 
         
         $data = array(
             'student_list'=> $student_list
@@ -25,5 +25,8 @@ class C_Student_Management extends CI_Controller {
         $password = md5($this->input->post('password'));
 
         $this->M_Student_Management->studentCreate($student_id, $password);
+        
+        redirect(['C_Student_Management/index']);
 	}
 }
+ 
