@@ -17,7 +17,7 @@ class C_MIS_Dashboard extends CI_Controller {
     public function index(){
         
         $employee_id = $this->session->userdata('employee_id');
-        $MIS_info = $this->M_MIS_Dashboard->fetchRegistrarInfo($employee_id);
+        $MIS_info = $this->M_MIS_Dashboard->fetchMISInfo($employee_id);
         
         $data = array( 
             'MIS_info' => $MIS_info
