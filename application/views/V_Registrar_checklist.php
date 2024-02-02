@@ -1,17 +1,17 @@
 <?php
 $imagePath = 'try.webp';
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') OR exit('No direct script access allowed');  
 ?>
 <!DOCTYPE html>
 
 <html>
     <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="<?= base_url(); ?>">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <link rel="stylesheet" href="css/Employee_DD.css?<?= filemtime('css/V_Registrar_Dashboard.css'); ?>"> -->
+    <link rel="stylesheet" href="css\V_Registrar_Checklist.css?<?= filemtime('css\V_Registrar_Checklist.css'); ?>">
 
     </head>
 
@@ -84,7 +84,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
         <main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-20">
-        <h1 class="text-gray-100 mt-5">     <?= $student_info['first_name'] . ' ' . $student_info['last_name'] ?></h1>  
+         
+        <h1 class="text-black-100 mt-5">     <?= $student_info['first_name'] . ' ' . $student_info['last_name'] ?></h1>  
         <div class="relative flex items-center justify-between">
         <div class=" rounded-lg shadow mt-2 mb-12">
           <!-- -----------------------------------------------------------------------------DROPDOWN-------------------------------------------------------------------------------------------------------------------------------- -->
