@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <main>
       <div class="cont">
         <div class="profile">
-          <img src="<?php echo base_url();?>images/<?= $MIS_info['profile_name']?>">
+          <img src="<?php echo base_url();?>images/<?= $MIS_info['profile_name'] == "" ? 'default_img.png' : $MIS_info['profile_name'] ?>">
         </div>
         
         <div class="profile">
