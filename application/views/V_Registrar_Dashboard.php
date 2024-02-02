@@ -35,6 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <span class="absolute -inset-1.5"></span>
                   <span class="sr-only">Open user menu</span>
                   <img src="<?php echo base_url();?>images/<?= $registrar_info['profile_name'] == "" ? 'profile.png' : $registrar_info['profile_name'] ?>" alt="profile" style="width: 53px; height: 53px; border-radius: 20px;">   
+                
                 </button>
               </div>
               <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
@@ -43,6 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                
                <br>
                <form action="/C_Registrar_Dashboard/logout" method="post">
+               <a href="/C_Registrar_Profile">Profile</a>
                 <input class="hover:font-bold block pr-12 text-sm text-gray-700" type="submit" value="Logout">
                 </form>
                 
