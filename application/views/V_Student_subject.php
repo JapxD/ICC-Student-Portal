@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="hidden sm:ml-6 sm:block">
               <a class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <h1 class="text-gray-100 mt-5"><span> <?= $student_info['course_name'] ?></span></h1>  
+                <h1 class="text-gray-100 mt-5"><span><?= $student_info['course_name'] ?></span></h1>  
               
             </div>
           </div>
@@ -88,16 +88,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-    <div class="seperator">
-      <label for="year_level">Select Year Level: </label>
-        <select id="year_level" require>
-          <option value="" selected disabled hidden>Please select</option>
-          <option value="1">First Year</option>
-          <option value="2">Second Year</option>
-          <option value="3">Third Year</option>
-          <option value="4">Fourth Year</option> 
-        </select>
-    </div>
+    
 
 
     
@@ -116,25 +107,84 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="overflow-auto rounded-lg shadow mt-40">
 
         <table class="w-full">
+        <caption>FIRST SEM</caption>
             <thead class="bg-gray-200 border-b-2 border-gray-200 ">
                 <tr>
-                <th class="w-64 p-3 text-sm font-semibold tracking-wide text-left">Subject Code</th>
-                <th class="w-32 p-3 text-sm font-semibold tracking-wide text-left">Subject Name</th>
-                
-                
-
-                
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>Subject Code</pre></th>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>Subject Name</pre></th>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>grades</pre></th>
                 </tr>
             </thead>
     </div>
             <tbody class="divide-y divide-gray-100">
-            <?php foreach ($student_subject as $row): ?>
+            <?php foreach ($Fsem1 as $row): ?>
               
                   <tr class="bg-gray-300">
         
-                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['subject_name'] ?></td>
-                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['subject_code'] ?></td>
-                  
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre><?= $row['subject_name'] ?></pre></td>
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>   <?= $row['subject_code'] ?></pre></td>
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre></pre></td>
+                  </tr>
+                
+                <?php endforeach; ?>
+            </tbody>
+            
+            <thead class="bg-gray-200 border-b-2 border-gray-200 ">
+                <tr>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>Subject Code</pre></th>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>Subject Name</pre></th>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>grades</pre></th>
+                </tr>
+            </thead>
+    </div>
+            <tbody class="divide-y divide-gray-100">
+            <?php foreach ($Ssem2 as $row): ?>
+              
+                  <tr class="bg-gray-300">
+        
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre><?= $row['subject_name'] ?></pre></td>
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>   <?= $row['subject_code'] ?></pre></td>
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre></pre></td>
+                  </tr>
+                
+                <?php endforeach; ?>
+            </tbody>
+            <thead class="bg-gray-200 border-b-2 border-gray-200 ">
+                <tr>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>Subject Code</pre></th>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>Subject Name</pre></th>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>grades</pre></th>
+                </tr>
+            </thead>
+    </div>
+            <tbody class="divide-y divide-gray-100">
+            <?php foreach ($Tsem1 as $row): ?>
+              
+                  <tr class="bg-gray-300">
+        
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre><?= $row['subject_name'] ?></pre></td>
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>   <?= $row['subject_code'] ?></pre></td>
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre></pre></td>
+                  </tr>
+                
+                <?php endforeach; ?>
+            </tbody>
+            <thead class="bg-gray-200 border-b-2 border-gray-200 ">
+                <tr>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>Subject Code</pre></th>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>Subject Name</pre></th>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>grades</pre></th>
+                </tr>
+            </thead>
+    </div>
+            <tbody class="divide-y divide-gray-100">
+            <?php foreach ($Ftsem1 as $row): ?>
+              
+                  <tr class="bg-gray-300">
+        
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre><?= $row['subject_name'] ?></pre></td>
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>   <?= $row['subject_code'] ?></pre></td>
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre></pre></td>
                   </tr>
                 
                 <?php endforeach; ?>
@@ -146,7 +196,103 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         </div>
         </div>
+        <div class="tb">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+        <div class="overflow-auto rounded-lg shadow mt-40">
+        <table class="w-full">
+            <caption>SECOND SEM</caption>
+            <thead class="bg-gray-200 border-b-2 border-gray-200 ">
+                <tr>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>Subject Code</pre></th>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>Subject Name</pre></th>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>grades</pre></th>
+                
 
+                
+                </tr>
+            </thead>
+    </div>
+
+
+            <tbody class="divide-y divide-gray-100">
+            <?php foreach ($Fsem2 as $row): ?>
+              
+                  <tr class="bg-gray-300">
+        
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre><?= $row['subject_name'] ?></pre></td>
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>   <?= $row['subject_code'] ?></pre></td>
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre></pre></td>
+                  </tr>
+                
+                <?php endforeach; ?>
+            </tbody>
+            <thead class="bg-gray-200 border-b-2 border-gray-200 ">
+                <tr>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>Subject Code</pre></th>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>Subject Name</pre></th>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>grades</pre></th>
+                </tr>
+            </thead>
+    </div>
+            <tbody class="divide-y divide-gray-100">
+            <?php foreach ($Ssem2 as $row): ?>
+              
+                  <tr class="bg-gray-300">
+        
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre><?= $row['subject_name'] ?></pre></td>
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>   <?= $row['subject_code'] ?></pre></td>
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre></pre></td>
+                  </tr>
+                
+                <?php endforeach; ?>
+            </tbody>
+            <thead class="bg-gray-200 border-b-2 border-gray-200 ">
+                <tr>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>Subject Code</pre></th>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>Subject Name</pre></th>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>grades</pre></th>
+                </tr>
+            </thead>
+    </div>
+            <tbody class="divide-y divide-gray-100">
+            <?php foreach ($Tsem2 as $row): ?>
+              
+                  <tr class="bg-gray-300">
+        
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre><?= $row['subject_name'] ?></pre></td>
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>   <?= $row['subject_code'] ?></pre></td>
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre></pre></td>
+                  </tr>
+                
+                <?php endforeach; ?>
+            </tbody>
+            <thead class="bg-gray-200 border-b-2 border-gray-200 ">
+                <tr>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>Subject Code</pre></th>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>Subject Name</pre></th>
+                <th class="w-32 p-5 text-sm font-semibold tracking-wide text-left"><pre>grades</pre></th>
+                </tr>
+            </thead>
+    </div>
+            <tbody class="divide-y divide-gray-100">
+            <?php foreach ($Ftsem2 as $row): ?>
+              
+                  <tr class="bg-gray-300">
+        
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre><?= $row['subject_name'] ?></pre></td>
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>   <?= $row['subject_code'] ?></pre></td>
+                  <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre></pre></td>
+                  </tr>
+                
+                <?php endforeach; ?>
+            </tbody>
+            </table>
+
+            </div>
+        </div>
+        </div>
+  </div>
 
 
 
@@ -154,9 +300,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
         
-
-<a href="http://localhost/C_Student_year">year1 ></a>
-
+        <a href="http://localhost/C_Student_Dashboard">DASHBOARD ></a>
+        <br>
+  <a href="http://localhost/C_Student_subject">CHECHLIST ></a>
+        <br>
+  <a href="http://localhost/C_Student_fyear">FIRST YEAR ></a>
+  <br>
+  <a href="http://localhost/C_Student_syear">SECOND YEAR ></a>
+  <br>
+  <a href="http://localhost/C_Student_tyear">THIRD YEAR ></a>
+  <br>
+  <a href="http://localhost/C_Student_ftyear">FOURTH YEAR ></a>
         
 
 <!-- -------------------------------------------------------------------------------------JS FOR NAV BAR------------------------------------------------------------------------------------------------------------------------ -->
