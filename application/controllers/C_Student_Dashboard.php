@@ -15,12 +15,25 @@ class C_MIS_Dashboard extends CI_Controller {
     }
 
     public function index(){
+<<<<<<< HEAD
         
         $employee_id = $this->session->userdata('employee_id');
         $MIS_info = $this->M_MIS_Dashboard->fetchMISInfo($employee_id); 
         
         $data = array( 
             'MIS_info' => $MIS_info
+=======
+        $student_id = $this->session->userdata('student_id');
+        $student_info = $this->M_Student_Dashboard->fetchStudentInfo($student_id);
+        $sem1 = $this->M_Student_Dashboard->fetchSem1($student_id);
+        $sem2 = $this->M_Student_Dashboard->fetchSem2($student_id);
+
+
+        $data = array( 
+            'student_info' => $student_info,
+            'sem1'=> $sem1,
+            'sem2'=> $sem2
+>>>>>>> 22f6edaa1dfb06bbe034c4b944fa99100c35cc64
         );
 		$this->load->view('V_MIS_Dashboard', $data);
     }
