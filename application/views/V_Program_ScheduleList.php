@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/Employee_D.css?<?= filemtime('css/Employee_D.css'); ?>">
 </head>
-<body>
+<body class="bg-blue-500">
 
 
 
@@ -36,16 +36,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <h1 class="text-gray-100 mt-5">     <span> <?= $teacher_schedule_info['course_name'] ?></span></h1> 
             </div>
-            
-          <div class="ml-5 mt-5">
-            <a  href="http://localhost/C_Program_Dashboard/index">Section</a>
-          </div>
-          <div class="ml-5 mt-5">
-            <a  href="http://localhost/C_Program_Dashboard/scheduleList">Schedule</a>
-          </div>
           </div>
 
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <form action=/C_Program_Dashboard/sectionList method="post" target="_self">
+            <button type="submit" class=" text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+              
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                 <path fill-rule="evenodd" d="M12.5 9.75A2.75 2.75 0 0 0 9.75 7H4.56l2.22 2.22a.75.75 0 1 1-1.06 1.06l-3.5-3.5a.75.75 0 0 1 0-1.06l3.5-3.5a.75.75 0 0 1 1.06 1.06L4.56 5.5h5.19a4.25 4.25 0 0 1 0 8.5h-1a.75.75 0 0 1 0-1.5h1a2.75 2.75 0 0 0 2.75-2.75Z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            </form>
             <!-- Profile dropdown -->
             
             <div class="relative ml-3">
@@ -79,8 +81,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-                      
-<div class="overflow-auto rounded-lg shadow mt-20">
+
+
+    <div>
+    <form action=/C_Program_Dashboard/createSchedule method="post" target="_self">
+      <input class="mt-36 ml-12 bg-blue-200 hover:bg-gray-800 hover:text-gray-200" type="submit" value="Create Schedule">    
+    </form>
+</div>
+
+ <main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-20">
+        <div class="relative flex items-center justify-between">
+        <div class=" rounded-lg shadow mt-2 mb-12">
+
+    <section>
     <table>
         <thead class="bg-gray-200 border-b-2 border-gray-200 ">
                 <tr>
@@ -112,14 +125,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php endforeach; ?>
         </tbody>
     </table>
-    </div>
+    </section>
 
+</div>
+</div>
+</main>
+<div class="mt-4 ml-12">
+<pre class="mt-2"><a class="underline hover:bg-blue-200" href="http://localhost/C_Program_Dashboard/index">Section</a>
+</div>
 
-
-    <form action=/C_Program_Dashboard/createSchedule method="post" target="_self">
-      <input class="hover:bg-blue-200 hover:text-gray-800" type="submit" value="Create Schedule">    
-    </form>
- 
 
 
 

@@ -119,7 +119,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </main>
 <div class="mt-4 ml-12">
   <pre><a class="underline hover:bg-blue-200" href="http://localhost/C_Program_Dashboard/scheduleList">Schedule</a>
-<pre class="mt-2"><a class="underline hover:bg-blue-200" href="http://localhost/C_Program_Dashboard/index">Section</a>
 </div>
 
     
