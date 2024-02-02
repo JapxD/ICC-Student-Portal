@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <base href="<?= base_url(); ?>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css\V_Teacher_Schedule.css?<?= filemtime('css\V_Teacher_Schedule.css'); ?>">
@@ -45,25 +45,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </form>
             <!-- Profile dropdown -->
             
-            <div class="relative ml-3">
-              <div>
-                <button type="button" onclick="toggleProfileDropdown()" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                  <span class="absolute -inset-1.5"></span>
-                  <span class="sr-only">Open user menu</span>
-                  <img src="<?php echo base_url();?>images/pp.png" alt="" style="width: 55px;">
+            <div class="dropDown"> 
+                <button class="dropbtn"> 
+                <img src="<?php echo base_url();?>images/<?= $teacher_info['profile_name'] == "" ? 'default_img.png' : $teacher_info['profile_name'] ?>" alt="profile" style="width: 53px; height: 53px; border-radius: 20px;">   
                 </button>
+                <div class="dropDownContent">
+                  <a href="/C_Teacher_Profile">Profile</a>
+                  <a href="/C_Teacher_Dashboard/logout">Log-out</a>
+                </div>
               </div>
-              <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                <!-- Active: "bg-gray-100", Not Active: "" -->
-               <span> <?= $teacher_info['last_name'] . ', ' . $teacher_info['first_name'] ?></span>
-               <br>
-                          <form action="/C_MIS_Dashboard/logout" method="post">
-                          <div class="hover:text-blue-500 ">
-                          <input class="hover:font-bold block pr-12 text-sm text-gray-700 hover:text-blue-800" type="submit" value="Logout">
-                          </div>
-                          </form>
-              </div>
-            </div>
           
           </div>
         </div>
