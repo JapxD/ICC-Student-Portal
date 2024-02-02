@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="<?= base_url(); ?>">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <link rel="stylesheet" href="css\V_Student_year.css?<?= filemtime('css\V_Student_year.css'); ?>"> -->
+    <link rel="stylesheet" href="css\V_Student_subject.css?<?= filemtime('css\V_Student_subject.css'); ?>">
 
 
 
@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-<body class="bg-gradient-to-r from-blue-400 to-blue-700">
+    <body class="bg-blue-500">
 <!-- -----------------------------------------------------------------------------NAVIGATION BAR SECTION-------------------------------------------------------------------------------------------------------------------------------- -->
 
 <nav class="bg-gray-800">
@@ -56,31 +56,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     
             <!-- Profile dropdown --> 
             
-            <div class="relative ml-3">
-              <div>
-                <button type="button" onclick="toggleProfileDropdown()" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                  <span class="absolute -inset-1.5"></span>
-                  <span class="sr-only">Open user menu</span>
-
-                  <img src="<?php echo base_url();?>images/pp.png" alt="" style="width: 55px;">
-                  
+            <div class="dropDown">
+                <button class="dropbtn">
+                <img src="<?php echo base_url();?>images/<?= $student_info['profile_name'] == "" ? 'profile.png' : $student_info['profile_name'] ?>" alt="profile" style="width: 53px; height: 53px; border-radius: 20px;">   
+                
                 </button>
+                <div class="dropDownContent">
+                  <a href="/C_Student_Profile">Profile</a>
+                  <a href="/C_Student_subject/logout">Log-out</a>
+                </div>
               </div>
-              <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                <!-- Active: "bg-gray-100", Not Active: "" -->
-               <span> <?= $student_info['last_name'] . ', ' . $student_info['first_name'] ?>   </span>
-               
-               <br>
-                          <form action="/C_student_Dashboard/logout" method="post">
-                          <div class="hover:text-blue-500 ">
-                          <input class="hover:font-bold block pr-12 text-sm text-gray-700 hover:text-blue-800" type="submit" value="Logout">
-                          </div>
-                          </form>
-              </div>
-
-              
-              </div>
-            </div>
           
           </div>
         </div>
@@ -90,9 +75,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-<main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-20">
+<main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mt-2 mb-20">
         <div class="relative flex items-center justify-between">
-        <div class=" rounded-lg shadow mt-20">
+        <div class=" rounded-lg shadow mt-2 mb-12">
           <!-- -----------------------------------------------------------------------------DROPDOWN-------------------------------------------------------------------------------------------------------------------------------- -->
 <div class="relative inline-block text-left">
   <div>
@@ -105,11 +90,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
   <div id="myOptionsDropdown" class="hidden absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-blue-200 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
     <div class="py-1" role="none">
-      <a href="http://localhost/C_Student_subject" class="text-gray-900 hover:bg-gray-800 hover:text-white block rounded-md px-3 py-2 text-base font-medium font-mono">CHECKLIST</a>
-          <a href="http://localhost/C_Student_fyear" class="text-gray-900 hover:bg-gray-800 hover:text-white block rounded-md px-3 py-2 text-base font-medium font-mono">FIRST YEAR</a>
-          <a href="http://localhost/C_Student_syear" class="text-gray-900 hover:bg-gray-800 hover:text-white block rounded-md px-3 py-2 text-base font-medium font-mono">SECOND YEAR</a>
-          <a href="http://localhost/C_Student_tyear" class="text-gray-900 hover:bg-gray-800 hover:text-white block rounded-md px-3 py-2 text-base font-medium font-mono">THIRD YEAR</a>
-          <a href="http://localhost/C_Student_ftyear" class="text-gray-900 hover:bg-gray-800 hover:text-white block rounded-md px-3 py-2 text-base font-medium font-mono">FOURTH YEAR</a>
+      <a href="C_Student_subject" class="text-gray-900 hover:bg-gray-800 hover:text-white block rounded-md px-3 py-2 text-base font-medium font-mono">CHECKLIST</a>
+          <a href="C_Student_fyear" class="text-gray-900 hover:bg-gray-800 hover:text-white block rounded-md px-3 py-2 text-base font-medium font-mono">FIRST YEAR</a>
+          <a href="C_Student_syear" class="text-gray-900 hover:bg-gray-800 hover:text-white block rounded-md px-3 py-2 text-base font-medium font-mono">SECOND YEAR</a>
+          <a href="C_Student_tyear" class="text-gray-900 hover:bg-gray-800 hover:text-white block rounded-md px-3 py-2 text-base font-medium font-mono">THIRD YEAR</a>
+          <a href="C_Student_ftyear" class="text-gray-900 hover:bg-gray-800 hover:text-white block rounded-md px-3 py-2 text-base font-medium font-mono">FOURTH YEAR</a>
       
     </div>
   </div>
@@ -143,14 +128,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php foreach ($sem1 as $row): ?>
               
               <tr class="bg-gray-300">
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['subject_code'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['subject_name'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['employee_name'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['prelim_grade'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['midterm_grade'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['final_grade'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['grade'] ?></td>
-                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['grade_remarks_name'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-left"><?= $row['subject_code'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-left"><?= $row['subject_name'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-left"><?= $row['employee_name'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-left"><?= $row['prelim_grade'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-left"><?= $row['midterm_grade'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-left"><?= $row['final_grade'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-left"><?= $row['grade'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-left"><?= $row['grade_remarks_name'] ?></td>
               </tr>
 
             <?php endforeach; ?>
@@ -184,14 +169,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php foreach ($sem2 as $row): ?>
                   
                   <tr class="bg-gray-300">
-                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['subject_code'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['subject_name'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['employee_name'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['prelim_grade'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['midterm_grade'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['final_grade'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['grade'] ?></td>
-                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['grade_remarks_name'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-left"><?= $row['subject_code'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-left"><?= $row['subject_name'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-left"><?= $row['employee_name'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-left"><?= $row['prelim_grade'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-left"><?= $row['midterm_grade'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-left"><?= $row['final_grade'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-left"><?= $row['grade'] ?></td>
+                    <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-left"><?= $row['grade_remarks_name'] ?></td>
                   </tr>
 
                 <?php endforeach; ?>

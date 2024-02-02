@@ -111,6 +111,7 @@ class M_Student_fyear extends CI_Model{
     public function fetchStudentInfo($student_id){  
         $this->db->select('subject.subject_name');
         $this->db->select('subject.subject_id');
+        $this->db->select('profile_name'); 
         $this->db->select('course_name');
         $this->db->select('first_name');
         $this->db->select('last_name');

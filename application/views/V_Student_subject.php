@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-<body class="bg-gradient-to-r from-blue-400 to-blue-700">
+    <body class="bg-blue-500">
 <!-- -----------------------------------------------------------------------------NAVIGATION BAR SECTION-------------------------------------------------------------------------------------------------------------------------------- -->
 
 <nav class="bg-gray-800">
@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="hidden sm:ml-6 sm:block">
               <a class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <h1 class="text-gray-100 mt-5"><span><?= $student_info['course_name'] ?></span></h1>              
+                <h1 class="text-gray-100 mt-5"><span><?= $student_info['course_name'] ?> | Curriculum checklist</span></h1>              
             </div>            
           </div>
 
@@ -65,7 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </nav>
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-        <main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-20">
+        <main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mt-2 mb-20">
         <div class="relative flex items-center justify-between">
         <div class=" rounded-lg shadow mt-2 mb-12">
           <!-- -----------------------------------------------------------------------------DROPDOWN-------------------------------------------------------------------------------------------------------------------------------- -->
