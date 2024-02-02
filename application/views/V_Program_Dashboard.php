@@ -38,12 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 
             </div>
             
-          <div class="ml-5 mt-5">
-            <a  href="http://localhost/C_Program_Dashboard/index">Section</a>
-          </div>
-          <div class="ml-5 mt-5">
-            <a  href="http://localhost/C_Program_Dashboard/scheduleList">Schedule</a>
-          </div>
+          
           </div>
 
 
@@ -82,15 +77,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </nav>
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div>
+  <form action=/C_Program_Dashboard/createSection method="post" target="_self">
+      <input class="mt-36 ml-12 bg-blue-200 hover:bg-gray-800 hover:text-gray-200" type="submit" value="Create Section">    
+    </form>
+</div>
 
-                      
-<div class="overflow-auto rounded-lg shadow mt-20">
+ <main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-20">
+        <div class="relative flex items-center justify-between">
+        <div class=" rounded-lg shadow mt-2 mb-12">
+
+    <section>
     <table>
         <thead class="bg-gray-200 border-b-2 border-gray-200 ">
                 <tr>
-                <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre>Section</pre></th>
-                <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre></pre></th>
-                <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre></pre></th>
+                <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre>Sections</pre></th>
+                <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left "></pre></th>
+                <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"></pre></th>
                 </tr>
             </thead>
 
@@ -109,11 +112,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php endforeach; ?>
         </tbody>
     </table>
+    </section>
+
+</div>
+</div>
+</main>
+<div class="mt-4 ml-12">
+  <pre><a class="underline hover:bg-blue-200" href="http://localhost/C_Program_Dashboard/scheduleList">Schedule</a>
+<pre class="mt-2"><a class="underline hover:bg-blue-200" href="http://localhost/C_Program_Dashboard/index">Section</a>
 </div>
 
-    <form action=/C_Program_Dashboard/createSection method="post" target="_self">
-      <input class="hover:bg-blue-200 hover:text-gray-800" type="submit" value="Create Section">    
-    </form>
+    
  
 
 

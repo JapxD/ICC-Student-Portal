@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <link rel="stylesheet" href="css/Employee_DD.css?<?= filemtime('css/V_Registrar_Dashboard.css'); ?>"> -->
 </head>
-<body class="bg-gradient-to-r from-blue-400 to-blue-700">
+<body class="bg-blue-500">
  <!-- -----------------------------------------------------------------------------NAVIGATION BAR SECTION-------------------------------------------------------------------------------------------------------------------------------- -->
  <nav class="bg-gray-800">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -75,7 +75,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="relative flex items-center justify-between">
         <div class=" rounded-lg shadow mt-20">
 
-        <form class="bg-gray-800 p-2" method="post" action="<?php echo base_url('C_Registrar_result/search'); ?>">
+        <form class="bg-gray-800 p-4" method="post" action="<?php echo base_url('C_Registrar_result/search'); ?>">
     <label class="pr-12 text-gray-200" for="searchName">Enter Name:</label>
     <input class="text-center" type="text" name="searchName" id="searchName">
     <input class="ml-12 text-gray-200 hover:bg-blue-200 hover:text-gray-800" type="submit" value="Search">
