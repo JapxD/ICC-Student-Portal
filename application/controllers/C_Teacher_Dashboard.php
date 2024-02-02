@@ -13,15 +13,17 @@ class C_Teacher_Dashboard extends CI_Controller {
         $this->load->model('M_Teacher_Dashboard');
 
     }
-//hi
+
     public function index(){
         $employee_id = $this->session->userdata('employee_id');
         $teacher_info = $this->M_Teacher_Dashboard->fetchTeacherInfo($employee_id);
-        $schedule_list = $this->M_Teacher_Dashboard->fetchTeacherScheduleList($employee_id);
+        $schedule_list = $this->M_Teacher_Dashboard->fetchTeacherScheduleList($employee_id);    
+        $role_list = $this->M_Teacher_Dashboard->fetchAccessRoleId($employee_id);
 
         $data = array( 
             'teacher_info' => $teacher_info,
-            'schedule_list' => $schedule_list 
+            'schedule_list' => $schedule_list,
+            'role_list' => $role_list 
         );
 		$this->load->view('V_Teacher_Dashboard', $data); 
     }
