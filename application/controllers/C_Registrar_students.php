@@ -70,17 +70,7 @@ class C_Registrar_students extends CI_Controller {
     }
 
 
-    public function search() {
-        $searchName = $this->input->post('searchName');
-
-        // SQL query to search for the name in the database
-        $query = $this->db->query("SELECT * FROM students WHERE first_name LIKE '%$searchName%'");
-
-        // Pass the result to the view
-        $data['results'] = $query->result_array();
-
-        $this->load->view('V_Registrar_result', $data);
-    }
+    
 
 
 

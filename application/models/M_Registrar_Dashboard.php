@@ -17,6 +17,11 @@ class M_Registrar_Dashboard extends CI_Model{
         $this->db->select('students.first_name');
         $this->db->select('students.last_name');
         $this->db->from('students');
+<<<<<<< HEAD
+=======
+        //$this->db->join('students','employee.registrar_id = students.registrar_id','left');
+        
+>>>>>>> 8478b796f7946a751af09c13c2f77a7d1f8d8446
         return $this->db->get()->result_array()[0];
     }
 
