@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="<?= base_url(); ?>">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/V_MIS_Profile.css?<?= filemtime('css/V_MIS_Profile.css'); ?>">
+     <!-- <link rel="stylesheet" href="css/Employee_DD.css?<?= filemtime('css/V_Registrar_Dashboard.css'); ?>"> -->
 </head>
 <body class="bg-blue-500">
  <!-- -----------------------------------------------------------------------------NAVIGATION BAR SECTION-------------------------------------------------------------------------------------------------------------------------------- -->
@@ -29,15 +29,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
 
         
-              <div class="dropDown">
-                <button class="dropbtn">
-                <img src="<?php echo base_url();?>images/<?= $registrar_info['profile_name'] == "" ? 'profile.png' : $registrar_info['profile_name'] ?>" alt="profile" style="width: 53px; height: 53px; border-radius: 20px;">   
+          <div class="relative ml-3">
+              <div>
+                <button type="button" onclick="toggleProfileDropdown()" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                  <span class="absolute -inset-1.5"></span>
+                  <span class="sr-only">Open user menu</span>
+                  <img src="<?php echo base_url();?>images/<?= $registrar_info['profile_name'] == "" ? 'profile.png' : $registrar_info['profile_name'] ?>" alt="profile" style="width: 53px; height: 53px; border-radius: 20px;">   
                 </button>
-                <div class="dropDownContent">
-                  <a href="/C_Registrar_Profile">Profile</a>
-                  <a href="/C_Registrar_Dashboard/logout">Log-out</a>
-                </div>
               </div>
+              <div id="myProfileDropdown" class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                <!-- Active: "bg-gray-100", Not Active: "" -->
+               <span> <?= $registrar_info['first_name'] . ' ' . $registrar_info['last_name'] ?></span>
+               
+               <br>
+               <form action="/C_Registrar_Dashboard/logout" method="post">
+                <input class="hover:font-bold block pr-12 text-sm text-gray-700" type="submit" value="Logout">
+                </form>
                 
 
           </div>
@@ -47,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-<main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-20">
+<main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mt-12 mb-20">
 <a class="p-2 rounded ml-12 bg-blue-200 border-gray-200 hover:bg-gray-800 hover:text-gray-200" href="C_Registrar_students">STUDENTS  ></a>
         <div class=" rounded-lg shadow mt-2 mb-12">
 <section>

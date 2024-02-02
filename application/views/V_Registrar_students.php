@@ -98,7 +98,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center"><pre>YEAR LEVEL</th>
 
-            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center"><pre></th>
+            <th class="w-32 p-3 text-sm font-semibold tracking-wide text-center"><pre></th>
             </tr>
         </thead>
 
@@ -111,7 +111,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-center"><?= $row['course_name'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-center"><?= $row['year_level'] == 1 ? '1st Year' : ($row['year_level'] == 2 ? '2nd Year' : ($row['year_level'] == 3 ? '3rd Year' : '4th Year')) ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class ">
-                <a href="/C_Registrar_checklist/studentGrade/?student_id=<?= $row['student_id'] ?>"><span class="p-1.5 text-xs font-medium uppercase tracking wider text-blue-800 rounded-lg hover:font-bold"><pre>     Edit</pre></span></a>
+                <a href="/C_Registrar_checklist/studentGrade/?student_id=<?= $row['student_id'] ?>"><span class="p-1.5 text-xs font-medium uppercase tracking wider text-blue-800 rounded-lg hover:font-bold"><pre>     View</pre></span></a>
                 </td>
               
               </tr>

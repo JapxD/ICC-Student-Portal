@@ -85,14 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="showHide">
           <button onclick="toggleForm()">Change Password?</button>
 
-            <div class="formcon">
-              <form action="/C_Registrar_Profile/resetPass" method="post" target="_self">
-                <div class="hide">
-                  <input type="password" id="password" name="password" value="123">
-                </div>
-                  <input type="submit" value="Reset Password?">
-              </form>
-            </div>
+            
           </div>
 
           <div class="changePass" >
