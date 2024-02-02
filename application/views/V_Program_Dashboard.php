@@ -92,8 +92,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <thead class="bg-gray-200 border-b-2 border-gray-200 ">
                 <tr>
                 <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre>Sections</pre></th>
-                <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left "></pre></th>
-                <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"></pre></th>
+                <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left "></pre>
+                <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"></pre><a class="underline hover:bg-blue-200" href="http://localhost/C_Program_Dashboard/scheduleList">Schedule</a></th>
                 </tr>
             </thead>
 
@@ -117,13 +117,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 </div>
 </main>
-<div class="mt-4 ml-12">
-  <pre><a class="underline hover:bg-blue-200" href="http://localhost/C_Program_Dashboard/scheduleList">Schedule</a>
-</div>
-
-    
- 
-
 
 
 
