@@ -88,7 +88,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>   <?= $row['semester'] ?></pre></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><pre>  <?= $row['section_name'] ?></pre></td>
                 <td class="p-3 text-sm whitespace-nowrap class ">
-                    <a href="/C_Teacher_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>"><span class="p-1.5 text-xs font-medium uppercase tracking wider text-blue-800 rounded-lg hover:font-bold"><pre>     Edit</pre></span></a>
+                <a href="/C_Teacher_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>"><span class="p-1.5 text-xs font-medium uppercase tracking wider text-blue-800 rounded-lg hover:font-bold"><pre>     Edit</pre></span></a>
                 </td>
             </tr>
             <?php endforeach; ?>

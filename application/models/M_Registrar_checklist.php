@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_Registrar_students extends CI_Model{
+class M_Registrar_checklist extends CI_Model{
     public function __construct(){
         parent::__construct();
         
