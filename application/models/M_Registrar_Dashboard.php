@@ -6,12 +6,16 @@ class M_Registrar_Dashboard extends CI_Model{
         parent::__construct();
     }
     
-    public function fetchRegistrarInfo($employee_id){
-        $this->db->select('first_name');
-        $this->db->select('last_name');
+    public function fetchRegistrarInfo($employee_id){   
+        $this->db->select('employee.first_name');
+        $this->db->select('employee.last_name');
+        $this->db->select('employee.profile_name');
+        $this->db->select('access_role.access_role_name');
         $this->db->from('employee');
-        $this->db->where('employee_id', $employee_id);
-        return $this->db->get()->result_array()[0];
+        $this->db->join('employee_user', 'employee.employee_id = employee_user.employee_id');
+        $this->db->join('access_role', 'employee_user.access_role_id = access_role.access_role_id');
+        $this->db->where('employee.employee_id', $employee_id);
+        return $this->db->get()->result_array()[0]; 
     }
     public function fetchStudentInfo($employee_id){
         $this->db->select('students.first_name');
@@ -29,7 +33,7 @@ class M_Registrar_Dashboard extends CI_Model{
         
         $this->db->select('student_number');
         $this->db->from('students');
-        $this->db->where('student_number', $insert_array['student_number']);
+        $this->db->where('student_number', $insert_array['student_number']); 
 
         $result = $this->db->get()->result_array();
 
@@ -39,7 +43,7 @@ class M_Registrar_Dashboard extends CI_Model{
         }else{
             $this->db->insert('students',$insert_array);
         }
-        
+        echo "<p>got it</p>";
     }
     
 }
