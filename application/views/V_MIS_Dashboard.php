@@ -51,10 +51,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="logo">
             <img src="images\icc logo.webp" alt="logo">
             </div>
-      <div class="create">
+      <div id="create1" class="create">
         <form action="/C_Employee_Management/" method=""post>
           <input type="submit" value="Create User Account"> 
         </form>
+      </div>
+      <div id="create2" class="create">
         <form action="/C_Student_Management/" method=""post>
           <input type="submit" value="Create Student Account"> 
         </form>
