@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-<body class="bg-gradient-to-r from-blue-400 to-blue-700">
+<body class="bg-blue-500">
 <!-- -----------------------------------------------------------------------------NAVIGATION BAR SECTION-------------------------------------------------------------------------------------------------------------------------------- -->
 
 <nav class="bg-gray-800">
