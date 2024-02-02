@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class C_Registrar_students extends CI_Controller {
+class C_Registrar_checklist extends CI_Controller {
 
     public function __construct(){
         parent::__construct();
@@ -10,44 +10,45 @@ class C_Registrar_students extends CI_Controller {
             redirect('C_Employee_Login');
         }
         $this->load->library('excel');
-        $this->load->model('M_Registrar_students');
+        $this->load->model('M_Registrar_checklist');
 
     }
 
     public function index(){
         
         $employee_id = $this->session->userdata('employee_id');
-        $registrar_info = $this->M_Registrar_students->fetchRegistrarInfo($employee_id);
-        $student_info = $this->M_Registrar_students->fetchStudentInfo($employee_id);
+        $registrar_info = $this->M_Registrar_checklist->fetchRegistrarInfo($employee_id);
+        $student_info = $this->M_Registrar_checklist->fetchStudentInfo($employee_id);
         // var_dump($student_info);
         $data = array( 
             'registrar_info' => $registrar_info,
             'student_info' => $student_info
         );
-		$this->load->view('V_Registrar_students', $data);
+		$this->load->view('V_Registrar_checklist', $data);
     }
 
     public function studentGrade(){
-        
+        $employee_id = $this->session->userdata('employee_id');
         $student_id = $this->input->get('student_id');
         // var_dump($student_id);
-        // $registrar_info = $this->M_Registrar_students->fetchRegistrarInfo($employee_id);
-        $student_info = $this->M_Registrar_students->fetchStudentInfoo($student_id);
-        $student_subject = $this->M_Registrar_students->fetchSubject($student_id);
-        $Fsem1 = $this->M_Registrar_students->fetchFsem1($student_id);
-        $Fsem2 = $this->M_Registrar_students->fetchFsem2($student_id);
-        $Ssem1 = $this->M_Registrar_students->fetchSsem1($student_id);
-        $Ssem2 = $this->M_Registrar_students->fetchSsem2($student_id);
-        $Tsem1 = $this->M_Registrar_students->fetchTsem1($student_id);
-        $Tsem2 = $this->M_Registrar_students->fetchTsem2($student_id);
-        $Ftsem1 = $this->M_Registrar_students->fetchFtsem1($student_id);
-        $Ftsem2 = $this->M_Registrar_students->fetchFtsem2($student_id);
+        $registrar_info = $this->M_Registrar_checklist->fetchRegistrarInfo($employee_id);
+        $student_info = $this->M_Registrar_checklist->fetchStudentInfoo($student_id);
+        $student_subject = $this->M_Registrar_checklist->fetchSubject($student_id);
+        $Fsem1 = $this->M_Registrar_checklist->fetchFsem1($student_id);
+        $Fsem2 = $this->M_Registrar_checklist->fetchFsem2($student_id);
+        $Ssem1 = $this->M_Registrar_checklist->fetchSsem1($student_id);
+        $Ssem2 = $this->M_Registrar_checklist->fetchSsem2($student_id);
+        $Tsem1 = $this->M_Registrar_checklist->fetchTsem1($student_id);
+        $Tsem2 = $this->M_Registrar_checklist->fetchTsem2($student_id);
+        $Ftsem1 = $this->M_Registrar_checklist->fetchFtsem1($student_id);
+        $Ftsem2 = $this->M_Registrar_checklist->fetchFtsem2($student_id);
 
 
 
         $data = array( 
             'student_info' => $student_info,
             'student_subject' => $student_subject,
+            'registrar_info' => $registrar_info,
             'Fsem1' => $Fsem1,
             'Fsem2' => $Fsem2,
             'Ssem1' => $Ssem1,
@@ -60,7 +61,7 @@ class C_Registrar_students extends CI_Controller {
             
         );
         
-		$this->load->view('V_Student_subject', $data);
+		$this->load->view('V_Registrar_checklist', $data);
     
         // var_dump($student_info);
         // $data = array( 
