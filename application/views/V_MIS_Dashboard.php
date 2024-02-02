@@ -47,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
     <main>
-      <div class="wellcome"><p>WELLCOME MIS HEAD</p></div>
+      <div class="wellcome"><p>WELCOME MIS HEAD!</p></div>
       <div class="logo">
             <img src="images\icc logo.webp" alt="logo">
             </div>
