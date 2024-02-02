@@ -145,7 +145,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </select>
         </div>
         
-        <input class="hover:bg-blue-200 hover:text-gray-800" type="submit" value="Create">    
+        <input class="hover:bg-blue-200 hover:text-gray-200 hover:bg-gray-800 ml-2 " type="submit" value="Create">    
     </form>
 </section> 
 </div>

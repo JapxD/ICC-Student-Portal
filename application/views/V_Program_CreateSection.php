@@ -90,30 +90,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-    
 
-
-
-
-
-
+  
 
 
 
  <main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between">
-        <div class=" rounded-lg shadow mt-36">
+
 
     <section>
-    <form class="bg-blue-200" action=/C_Program_Dashboard/createSectionId method="post" target="_self">
-        <h2 class="text-center">CREATE SECTION</h2>
+    <form class="bg-blue-200 rounded mt-36 p-12" action=/C_Program_Dashboard/createSectionId method="post" target="_self">
+        <h2 class="text-center text-xl  font-serif">CREATE SECTION</h2>
 
-        <div class="inputdiv">
+        <div class="inputdiv text-center">
         <label for="section_name">Section:</label><br>
         <input class="text-center" type="text" id="section_name" name="section_name">
         </div>
         
-        <div class="inputdiv">
+        <div class="inputdiv text-center">
         <label for="year_level">Year Level: </label><br>
         <select class="text-gray-800" id="year_level" name="year_level">
             <option value="" hidden>-</option>
@@ -124,56 +119,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </select>
         </div>
 
-        <input class="hover:bg-blue-200 hover:text-gray-800" type="submit" value="Create">    
+        <input class="hover:bg-blue-200 hover:text-gray-200 hover:bg-gray-800 ml-4" type="submit" value="Create">    
     </form>
-</div>
+    <form action=/C_Program_Dashboard/index method="post" target="_self">
+      <input class="mt-36 ml-12 bg-blue-200 hover:bg-gray-800 hover:text-gray-200" type="submit" value="Section">    
+    </form>
+    <form action=/C_Program_Dashboard/scheduleList method="post" target="_self">
+      <input class="mt-36 ml-12 bg-blue-200 hover:bg-gray-800 hover:text-gray-200" type="submit" value="Schedule">    
+    </form>
     </section>
 
 </div>
-</div>
 </main>
-<div class="mt-4 ml-12">
-  <pre><a class="underline hover:bg-blue-200" href="http://localhost/C_Program_Dashboard/index">Section</a>
-<pre class="mt-2"><a class="underline hover:bg-blue-200" href="http://localhost/C_Program_Dashboard/scheduleList">Schedule</a>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
