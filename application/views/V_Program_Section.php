@@ -83,13 +83,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
                  
 
-  <main class="mx-auto max-w-7xl px-2">
-
-
+  <main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-20  mt-36 ">
+        <div class="relative flex items-center justify-between">
+        <div class=" rounded-lg shadow">
   
     <section>
-    <table class="flex">
-        <thead class="bg-gray-200 border-b-2 border-gray-200 mt-36 ml-48 ">
+    <table>
+        <thead class="bg-gray-200 border-b-2 border-gray-200 ">
                 <tr>
                 <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre>Student Name</pre></th>
                 <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre></pre></th>
@@ -120,7 +120,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
     </section>
 
-
+</div>
+</div>
 </main>
     
 <script>
