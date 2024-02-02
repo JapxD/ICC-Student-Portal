@@ -13,7 +13,7 @@ class C_Teacher_Dashboard extends CI_Controller {
         $this->load->model('M_Teacher_Dashboard');
 
     }
-
+//hi
     public function index(){
         $employee_id = $this->session->userdata('employee_id');
         $teacher_info = $this->M_Teacher_Dashboard->fetchTeacherInfo($employee_id);
