@@ -13,7 +13,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/Employee_D.css?<?= filemtime('css/Employee_D.css'); ?>">
 </head>
-<body>
+
+<body class="bg-blue-500">
 
 
 
@@ -38,12 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
             
-            <div class="ml-5 mt-5">
-              <a  href="http://localhost/C_Program_Dashboard/index">Section</a>
-            </div>
-            <div class="ml-5 mt-5">
-              <a  href="http://localhost/C_Program_Dashboard/scheduleList">Schedule</a>
-            </div>
+            
           </div>
 
 
@@ -82,8 +78,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-<div class="overflow-auto rounded-lg shadow mt-20 ">
 
+
+    
+
+
+
+
+
+
+
+
+
+ <main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex items-center justify-between">
+        <div class=" rounded-lg shadow mt-12">
+
+    <section>
     <form action=/C_Program_Dashboard/createSectionId method="post" target="_self">
         <h2>CREATE SECTION</h2>
 
@@ -105,11 +116,59 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <input class="hover:bg-blue-200 hover:text-gray-800" type="submit" value="Create">    
     </form>
-
-    <form action=/C_Program_Dashboard/sectionList method="post" target="_self">
+        <form action=/C_Program_Dashboard/sectionList method="post" target="_self">
       <input class="hover:bg-blue-200 hover:text-gray-800" type="submit" value="Back">    
     </form>
 </div>
+    </section>
+
+</div>
+</div>
+</main>
+<div class="mt-4 ml-12">
+  <pre><a class="underline hover:bg-blue-200" href="http://localhost/C_Program_Dashboard/index">Section</a>
+<pre class="mt-2"><a class="underline hover:bg-blue-200" href="http://localhost/C_Program_Dashboard/scheduleList">Schedule</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script>
       function toggleProfileDropdown() {

@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/V_MIS_Profile.css?<?= filemtime('css/V_MIS_Profile.css'); ?>">
 </head>
-<body class="bg-gradient-to-r from-blue-400 to-blue-700">
+<body class="bg-blue-500">
  <!-- -----------------------------------------------------------------------------NAVIGATION BAR SECTION-------------------------------------------------------------------------------------------------------------------------------- -->
  <nav class="bg-gray-800">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -47,11 +47,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between">
-            <div class="overflow-auto rounded-lg shadow mt-40">
-
-            <div class="bg-gray-200 border-gray-200 text-center pt-2">
+<main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-20">
+<a class="p-2 rounded ml-12 bg-blue-200 border-gray-200 hover:bg-gray-800 hover:text-gray-200" href="C_Registrar_students">STUDENTS  ></a>
+        <div class=" rounded-lg shadow mt-2 mb-12">
+<section>
+<div class="bg-gray-800 border-gray-200 text-center text-gray-200 pt-4">
             <span>Welcome! <?= $registrar_info['last_name'] . ', ' . $registrar_info['first_name'] ?></span><br><br>
 
 <span><?= !empty($message) ? $message : '' ?></span> 
@@ -64,13 +64,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <input class="hover:text-blue-800 hover:text-bold hover:underline" type="submit" value="Upload Excel" name="submit">
 </form>
 </div>
-            </div>
+</section>          
         </div>
-    </div>
+</main>
 
     <br><br>
     
-    <a class="p-2 rounded ml-12 bg-blue-200 border-gray-200 hover:bg-gray-800 hover:text-gray-200" href="C_Registrar_students">STUDENTS  ></a>
+    
     
     <script>
       function toggleProfileDropdown() {

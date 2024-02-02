@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <link rel="stylesheet" href="css/Employee_DD.css?<?= filemtime('css/V_Registrar_Dashboard.css'); ?>"> -->
 </head>
-<body class="bg-gradient-to-r from-blue-400 to-blue-700">
+<body class="bg-blue-500">
  <!-- -----------------------------------------------------------------------------NAVIGATION BAR SECTION-------------------------------------------------------------------------------------------------------------------------------- -->
  <nav class="bg-gray-800">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
