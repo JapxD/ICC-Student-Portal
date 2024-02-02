@@ -56,6 +56,11 @@ nav h1 span{
     border-radius: 5px;
     box-shadow: 10px 7px 15px black;
 }
+.cont{
+    position: relative;
+    color: whitesmoke;
+    margin-right: 10px;
+}
 /* .cont{
     display: flex;
     padding: 10px;
