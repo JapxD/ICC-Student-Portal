@@ -36,13 +36,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <h1 class="text-gray-100 mt-5">     <span> <?= $teacher_schedule_info['course_name'] ?></span></h1> 
             </div>
+            
+          <div class="ml-5 mt-5">
+            <a  href="http://localhost/C_Program_Dashboard/index">Section</a>
           </div>
-
-          <div class="redirect">
-            <a  href="http://localhost/C_Program_Dashboard/index">Student List ></a>
+          <div class="ml-5 mt-5">
+            <a  href="http://localhost/C_Program_Dashboard/scheduleList">Schedule</a>
           </div>
-
-
+          </div>
 
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <!-- Profile dropdown -->
@@ -87,6 +88,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre>Subject</pre></th>
                 <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre>Schedule</pre></th>
                 <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre>Room</pre></th>
+                <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre>Section</pre></th>
+                <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre></pre></th>
                 <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre></pre></th>
                 </tr>
             </thead>
@@ -98,8 +101,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['subject_name'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['schedule_remarks'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['room_remarks'] ?></td>
+                <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $row['section_name'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class">
                     <a href="/C_Program_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>"><span class="p-1.5 text-xs font-medium uppercase tracking wider text-blue-800 rounded-lg hover:font-bold"><pre>Edit</pre></span></a>
+                </td>
+                <td class="p-3 text-sm whitespace-nowrap class">
+                    <a href="/C_Program_Dashboard/deleteSchedule/?schedule_id=<?= $row['schedule_id'] ?>"><span class="p-1.5 text-xs font-medium uppercase tracking wider text-blue-800 rounded-lg hover:font-bold"><pre>Delete</pre></span></a>
                 </td>
             </tr>
             <?php endforeach; ?>
@@ -109,6 +116,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
+    <form action=/C_Program_Dashboard/createSchedule method="post" target="_self">
+      <input class="hover:bg-blue-200 hover:text-gray-800" type="submit" value="Create Schedule">    
+    </form>
  
 
 
