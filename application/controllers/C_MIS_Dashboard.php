@@ -20,7 +20,6 @@ class C_MIS_Dashboard extends CI_Controller {
         $MIS_info = $this->M_MIS_Dashboard->fetchMISInfo($employee_id);
         $role_list = $this->M_MIS_Dashboard->fetchAccessRoleId($employee_id); 
         // $access_role_name = $this->M_MIS_Dashboard->fetchAccessRoles();
-        
         $data = array( 
             'MIS_info' => $MIS_info,
             'role_list'=> $role_list
