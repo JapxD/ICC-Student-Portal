@@ -84,13 +84,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
     <div>
-    <form action=/C_Program_Dashboard/createSchedule method="post" target="_self">
-      <input class="mt-36 ml-12 bg-blue-200 hover:bg-gray-800 hover:text-gray-200" type="submit" value="Create Schedule">    
-    </form>
-
-    <form action=/C_Program_Dashboard/index method="post" target="_self">
-      <input class="mt-36 ml-12 bg-blue-200 hover:bg-gray-800 hover:text-gray-200" type="submit" value="Section">    
-    </form>
+    
 </div>
 
  <main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-20">
@@ -98,7 +92,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class=" rounded-lg shadow mt-2 mb-12">
 
     <section>
-    <table>
+    <table class="ml-64">
         <thead class="bg-gray-200 border-b-2 border-gray-200 ">
                 <tr>
                 <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre>Teacher Assigned</pre></th>
@@ -129,6 +123,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php endforeach; ?>
         </tbody>
     </table>
+    <form action=/C_Program_Dashboard/createSchedule method="post" target="_self">
+      <input class="mt-36 ml-12 bg-blue-200 hover:bg-gray-800 hover:text-gray-200" type="submit" value="Create Schedule">    
+    </form>
+
+    <form action=/C_Program_Dashboard/index method="post" target="_self">
+      <input class=" mt-4 ml-12 bg-blue-200 hover:bg-gray-800 hover:text-gray-200" type="submit" value="Section">    
+    </form>
     </section>
 
 </div>
