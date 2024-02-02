@@ -30,9 +30,19 @@ class M_Registrar_Dashboard extends CI_Model{
         $this->db->from('students');
         $this->db->where('student_number', $insert_array['student_number']); 
 
-        $result = $this->db->get()->result_array();
+        $student_exists = $this->db->get()->result_array();
 
-        if($result){ 
+        $this->db->select('course_id');
+        $this->db->from('course');
+        $this->db->where('course_code', $insert_array['course_code']); 
+        
+        $course_id = $this->db->get()->result_array()[0]['course_id'];
+
+        $insert_array['course_id'] = $course_id;
+
+        unset( $insert_array['course_code'] );
+
+        if($student_exists){ 
             $this->db->where('student_number',$insert_array['student_number']);
             $this->db->update('students',$insert_array);
         }else{
