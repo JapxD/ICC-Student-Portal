@@ -13,19 +13,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css\V_Student_subject.css?<?= filemtime('css\V_Student_subject.css'); ?>">
 
-
-
-    
-
-
-
     </head>
 
 
 
 
 
-<body class="bg-blue-500">
+<body class="bg-gradient-to-r from-blue-400 to-blue-700">
 <!-- -----------------------------------------------------------------------------NAVIGATION BAR SECTION-------------------------------------------------------------------------------------------------------------------------------- -->
 
 <nav class="bg-gray-800">
@@ -73,7 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
         <main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-20">
         <div class="relative flex items-center justify-between">
-        <div class=" rounded-lg shadow mt-20">
+        <div class=" rounded-lg shadow mt-2 mb-12">
           <!-- -----------------------------------------------------------------------------DROPDOWN-------------------------------------------------------------------------------------------------------------------------------- -->
 <div class="relative inline-block text-left">
   <div>
