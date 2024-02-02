@@ -89,7 +89,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   
     <section>
     <table class="flex">
-        <thead class="bg-gray-200 border-b-2 border-gray-200 ">
+        <thead class="bg-gray-200 border-b-2 border-gray-200 mt-36 ml-48 ">
                 <tr>
                 <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre>Student Name</pre></th>
                 <th class="w-30 p-3 text-sm font-semibold tracking-wide text-left"><pre></pre></th>
