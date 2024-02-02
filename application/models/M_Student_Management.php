@@ -17,6 +17,7 @@ class M_Student_Management extends CI_Model{
     }
     
     public function studentCreate($student_id, $password) 
+    public function studentCreate($student_id, $password) 
     {
         
         $data = array(

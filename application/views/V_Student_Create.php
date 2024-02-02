@@ -18,6 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="lib/handsontable/7.1.0/css/handsontable.full.min.css">
     <link rel="stylesheet" href="css\V_Student_Create.css?<?= filemtime('css\V_Student_Create.css'); ?>">
     <script src="https://cdn.tailwindcss.com"></script> 
+    <script src="https://cdn.tailwindcss.com"></script> 
 </script>
 </head>
 <body>
@@ -55,7 +56,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </select><br>
         </div> 
         <div class="pass">
+        </div> 
+        <div class="pass">
         <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" value="123" maxlength="16"><br><br>
+        </div>
         <input type="password" id="password" name="password" value="123" maxlength="16"><br><br>
         </div>
         <input class="hover:bg-blue-200 hover:text-gray-900" type="submit" value="Create">

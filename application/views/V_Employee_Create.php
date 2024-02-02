@@ -16,6 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <main>
     <header>
         <h1>Immaculada Concepcion College</h1>  
+        <h1>Immaculada Concepcion College</h1>  
         <div class="redirect">
             <a href="/C_Student_Management/">Student Create ></a>
         </div>
@@ -25,6 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </header>
     
     <div class="logo">
+        <img src="images\icc logo.webp" alt="logo">  
         <img src="images\icc logo.webp" alt="logo">  
     </div>
 

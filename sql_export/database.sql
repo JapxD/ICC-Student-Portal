@@ -3,7 +3,15 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD:sql_export/icc_student_portal (3).sql
+<<<<<<<< HEAD:sql_export/icc_student_portal 02022024.sql
+-- Generation Time: Feb 01, 2024 at 05:00 PM
+========
+-- Generation Time: Feb 01, 2024 at 04:54 PM
+>>>>>>>> f7f605ffb28421c52735c64d7fe4897cfb2cd3aa:sql_export/icc_student_portal (3).sql
+=======
 -- Generation Time: Feb 02, 2024 at 04:49 AM
+>>>>>>> 5c135607b9a0a2f61101b4c28098f0ec4843b252:sql_export/database.sql
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 

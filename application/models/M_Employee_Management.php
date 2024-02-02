@@ -13,6 +13,7 @@ class M_Employee_Management extends CI_Model{
         $this->db->select('employee_id');
         $this->db->from('employee');
         return $this->db->get()->result_array();   
+        return $this->db->get()->result_array();   
     }
 
     public function fetchEmployeeID(){
@@ -35,6 +36,7 @@ class M_Employee_Management extends CI_Model{
     
     public function fetchAccessRoles(){
         $this->db->select('access_role_id');
+        $this->db->select('access_role_name'); 
         $this->db->select('access_role_name'); 
         $this->db->from('access_role');
         return $this->db->get()->result_array(); 

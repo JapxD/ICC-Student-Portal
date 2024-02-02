@@ -13,6 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="css\V_MIS_Dashboard.css?<?= filemtime('css\V_MIS_Dashboard.css'); ?>">
 </head>
 
+
 <body>
 <nav class="bg-gray-800">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -32,7 +33,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="dropDown">
                 <button class="dropbtn">
                 <img src="<?php echo base_url();?>images/<?= $MIS_info['profile_name']?>" alt="profile" style="width: 53px; height: 53px; border-radius: 20px;">   
+
+        
+              <div class="dropDown">
+                <button class="dropbtn">
+                <img src="<?php echo base_url();?>images/<?= $MIS_info['profile_name']?>" alt="profile" style="width: 53px; height: 53px; border-radius: 20px;">   
                 </button>
+                <div class="dropDownContent">
+                  <a href="/C_MIS_Profile">Profile</a>
+                  <a href="/C_MIS_Dashboard/logout">Log-out</a>
+                </div>
                 <div class="dropDownContent">
                   <a href="/C_MIS_Profile">Profile</a>
                   <a href="/C_MIS_Dashboard/logout">Log-out</a>
@@ -40,10 +50,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
                 
 
+                
+
           </div>
         </div>
       </div>
     </nav>
+
+
+    <main>
+      <div class="create">
+        <form action="/C_Employee_Management/" method=""post>
+          <input type="submit" value="Create Manager Account"> 
+        </form>
+        <form action="/C_Student_Management/" method=""post>
+          <input type="submit" value="Create Student Account"> 
+        </form>
+      </div>
+    </main>
 
 
     <main>
