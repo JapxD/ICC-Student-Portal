@@ -68,14 +68,20 @@ nav h1 span{
     box-shadow: 10px 7px 15px black;
 }
 main .create{ 
-    display: absolute;
+    position: relative;
     width: 200px; 
     background-color: rgba(228, 218, 218, 0.5);
     border-radius: 5px;
-    margin-top: 10%;
-    margin-left: 43%;
+    margin-top: 15%;
+    margin-left: 25%;
     text-align: center;
     box-shadow: 10px 7px 15px black; 
+    top: 20px;
+    left: 50px;
+    float: left;
+}
+img{
+    height: 20px;
 }
 .create form input {
     padding: 15px;
@@ -86,4 +92,20 @@ main .create{
 .create form:hover {
     background-color: rgba(228, 218, 218, 0.5);
     border-radius: 5px;
+}
+.logo img{
+    position: relative;
+    height: 450px;
+    float: right;
+    margin-right: 400px;
+    margin-top: 110px;
+}
+.wellcome p{
+    text-align: center;
+    color: whitesmoke;
+    position: relative;
+    top: 150px;
+    right: 200px;
+    font-size: 34px;
+    text-shadow: 10px 7px 15px black;
 }

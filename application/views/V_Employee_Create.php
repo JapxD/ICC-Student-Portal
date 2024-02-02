@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="login">
         <form action=/C_Employee_Management/employeeCreate method="post" target="_self">
-            <h2>CREATE EMPLOYEE ACCOUNT</h2>
+            <h2>CREATE USER ACCOUNT</h2>
                         <!-- <p>?= $employee_count?></p> -->
             <label for="access_role_id">Role :</label><br>
             <select id="access_role_id" name="access_role_id">
