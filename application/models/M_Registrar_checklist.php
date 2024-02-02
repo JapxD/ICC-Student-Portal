@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_Registrar_students extends CI_Model{
+class M_Registrar_checklist extends CI_Model{
     public function __construct(){
         parent::__construct();
         
@@ -38,7 +38,7 @@ class M_Registrar_students extends CI_Model{
         $this->db->where('employee_id', $employee_id);
         return $this->db->get()->result_array()[0];
     }
-    public function fetchStudentInfo($employee_id){
+    public function fetchStudentInfo($student_id){
         $this->db->select('students.student_id');
         $this->db->select('students.first_name');
         $this->db->select('students.last_name');
@@ -46,7 +46,8 @@ class M_Registrar_students extends CI_Model{
         $this->db->select('course.course_name');
         $this->db->from('students');
         $this->db->join('course','students.course_id = course.course_id','left');
-        return $this->db->get()->result_array();
+        $this->db->where('student_id', $student_id);
+        return $this->db->get()->result_array()[0];
     }
 // --------------------------------------------------------------------------------------------------------
 public function fetchStudentInfoo($student_id){
@@ -58,6 +59,7 @@ public function fetchStudentInfoo($student_id){
     $this->db->select('course.course_name');
     $this->db->from('students');
     $this->db->join('course','students.course_id = course.course_id','left');
+    $this->db->where('student_id', $student_id);
     return $this->db->get()->result_array()[0];
 }
 

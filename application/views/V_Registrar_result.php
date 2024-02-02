@@ -93,6 +93,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center"><pre>COURSE NAME</th>
 
             <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center"><pre>YEAR LEVEL</th>
+
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center"><pre></th>
             </tr>
         </thead>
 
@@ -104,7 +106,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-center"><?= $result['last_name'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-center"><?= $result['course_id'] == 1 ? 'Bachelor of Science in Computer Science' : ($result['course_id'] == 2 ? 'Bachelor of Science in Information Technology' : ($result['course_id'] == 3 ? 'Bachelor of Science in Business Administration' : '4th Year')) ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-center"><?= $result['year_level'] == 1 ? '1st Year' : ($result['year_level'] == 2 ? '2nd Year' : ($result['year_level'] == 3 ? '3rd Year' : '4th Year')) ?></td>
-                
+                <td class="p-3 text-sm whitespace-nowrap class ">
+                <a href="/C_Teacher_Dashboard/schedule/?schedule_id="><span class="p-1.5 text-xs font-medium uppercase tracking wider text-blue-800 rounded-lg hover:font-bold"><pre>     Edit</pre></span></a>
+                </td>
               
                 
                 
