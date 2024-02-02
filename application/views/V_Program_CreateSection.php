@@ -45,6 +45,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+          <form action=/C_Program_Dashboard/sectionList method="post" target="_self">
+            <button type="submit" class=" text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+              
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                 <path fill-rule="evenodd" d="M12.5 9.75A2.75 2.75 0 0 0 9.75 7H4.56l2.22 2.22a.75.75 0 1 1-1.06 1.06l-3.5-3.5a.75.75 0 0 1 0-1.06l3.5-3.5a.75.75 0 0 1 1.06 1.06L4.56 5.5h5.19a4.25 4.25 0 0 1 0 8.5h-1a.75.75 0 0 1 0-1.5h1a2.75 2.75 0 0 0 2.75-2.75Z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            </form>
             <!-- Profile dropdown -->
             
             <div class="relative ml-3">
@@ -92,15 +102,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
  <main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between">
-        <div class=" rounded-lg shadow mt-12">
+        <div class=" rounded-lg shadow mt-36">
 
     <section>
-    <form action=/C_Program_Dashboard/createSectionId method="post" target="_self">
-        <h2>CREATE SECTION</h2>
+    <form class="bg-blue-200" action=/C_Program_Dashboard/createSectionId method="post" target="_self">
+        <h2 class="text-center">CREATE SECTION</h2>
 
         <div class="inputdiv">
         <label for="section_name">Section:</label><br>
-        <input type="text" id="section_name" name="section_name">
+        <input class="text-center" type="text" id="section_name" name="section_name">
         </div>
         
         <div class="inputdiv">
@@ -115,9 +125,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 
         <input class="hover:bg-blue-200 hover:text-gray-800" type="submit" value="Create">    
-    </form>
-        <form action=/C_Program_Dashboard/sectionList method="post" target="_self">
-      <input class="hover:bg-blue-200 hover:text-gray-800" type="submit" value="Back">    
     </form>
 </div>
     </section>
