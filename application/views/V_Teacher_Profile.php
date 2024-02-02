@@ -83,9 +83,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </div>
           
           <div class="showHide">
-          <button onclick="toggleForm()">Change Password?</button>
+          <button id="changepass" onclick="toggleForm()">Change Password?</button>
 
-            <div class="formcon">
+            <!-- <div class="formcon">
               <form action="/C_Teacher_Profile/resetPass" method="post" target="_self">
                 <div class="hide">
                   <input type="password" id="password" name="password" value="123">
@@ -93,8 +93,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <input type="submit" value="Reset Password?">
               </form>
             </div>
-          </div>
-
+          </div> -->
+          
           <div class="changePass" >
             <form action="/C_Teacher_Profile/changePass" method="post" target="_self">
               <input type="password" id="password" name="password" >
