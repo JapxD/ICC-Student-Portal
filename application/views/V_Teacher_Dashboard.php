@@ -54,8 +54,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-<!-- <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8"> -->
-    <!-- <div class="relative flex h-16 items-center justify-between"> -->
+<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mt-24">
+    <div class="relative flex h-16 items-center justify-between">
 
     <div class="overflow-auto rounded-lg shadow mt-20">
     <table>
@@ -95,8 +95,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </tbody>
     </table>
     </div>
-    <!-- </div>     -->
-    <!-- </div> -->
+    </div>    
+    </div>
  
 
 
