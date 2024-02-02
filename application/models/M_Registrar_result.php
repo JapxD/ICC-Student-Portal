@@ -40,5 +40,10 @@ class M_Registrar_result extends CI_Model{
         }
         
     }
+
+    public function updateStudentGrade($batch_condition){
+    
+        $this->db->update_batch('students_schedule', $batch_condition, 'student_schedule_id');
+    }
     
 }

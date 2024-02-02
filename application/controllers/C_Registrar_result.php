@@ -63,6 +63,8 @@ class C_Registrar_result extends CI_Controller {
         redirect('C_Registrar_result/index');
     
     }
+    $this->M_Teacher_Dashboard->updateStudentGrade($batch_condition);
+        redirect("/C_Teacher_Dashboard/schedule/?schedule_id=$schedule_id");
 
     public function logout(){
         $this->session->unset_userdata('employee_id');

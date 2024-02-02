@@ -59,8 +59,8 @@ class C_Registrar_students extends CI_Controller {
             $this->M_Registrar_Dashboard->saveUploadedExcel($insert_array);
         }
 
-        $this->session->set_flashdata('message','Save Successful!');
-        redirect('C_Registrar_Dashboard/index');
+        $this->M_Teacher_Dashboard->updateStudentGrade($batch_condition);
+        redirect("/C_Registrar_students/schedule/?schedule_id=$schedule_id");
     
     }
 

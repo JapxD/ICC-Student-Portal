@@ -102,7 +102,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $result['last_name'] ?></td>
                     <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $result['course_id'] == 1 ? 'Bachelor of Science in Computer Science' : ($result['course_id'] == 2 ? 'Bachelor of Science in Information Technology' : ($result['course_id'] == 3 ? 'Bachelor of Science in Business Administration' : '4th Year')) ?></td>
                     <td class="p-3 text-sm whitespace-nowrap class bg-blue-200"><?= $result['year_level'] == 1 ? '1st Year' : ($result['year_level'] == 2 ? '2nd Year' : ($result['year_level'] == 3 ? '3rd Year' : '4th Year')) ?></td>
-                    
+                    <a href="/C_Teacher_Dashboard/schedule/?schedule_id=<?= $row['schedule_id'] ?>"><span class="p-1.5 text-xs font-medium uppercase tracking wider text-blue-800 rounded-lg hover:font-bold"><pre>     Edit</pre></span></a>
+                
                   
                     
                     
