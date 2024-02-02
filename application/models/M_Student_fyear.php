@@ -100,7 +100,14 @@ class M_Student_fyear extends CI_Model{
         return $this->db->get()->result_array();
     }
 
-
+    public function fetchPicture($student_id){
+        $this->db->select('first_name');
+        $this->db->select('last_name');
+        $this->db->select('profile_name');
+        $this->db->from('students');
+        $this->db->where('student_id', $student_id);
+        return $this->db->get()->result_array()[0];
+    }
 
 
 
@@ -111,7 +118,7 @@ class M_Student_fyear extends CI_Model{
     public function fetchStudentInfo($student_id){  
         $this->db->select('subject.subject_name');
         $this->db->select('subject.subject_id');
-        $this->db->select('profile_name'); 
+        $this->db->select('students.profile_name'); 
         $this->db->select('course_name');
         $this->db->select('first_name');
         $this->db->select('last_name');

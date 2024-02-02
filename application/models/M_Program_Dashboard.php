@@ -94,19 +94,14 @@ class M_Program_Dashboard extends CI_Model{
     }
     
     public function fetchSubjectList($course_id){
-        // $this->db->select('subject.subject_name');
-        // $this->db->select('subject.subject_code');
-        // $this->db->select('subject.subject_id');
-        // $this->db->from('course');0
-        // $this->db->join('curriculum','course.course_id = curriculum.course_id','left');
-        // $this->db->join('subject','curriculum.subject_id = subject.subject_id','left');
-        // $this->db->where('course.course_id', $course_id);
-        // $this->db->order_by('subject.subject_code');
-        // return $this->db->get()->result_array();
         $this->db->select('subject.subject_name');
         $this->db->select('subject.subject_code');
         $this->db->select('subject.subject_id');
-        $this->db->from('subject');
+        $this->db->from('course');
+        $this->db->join('curriculum','course.course_id = curriculum.course_id','left');
+        $this->db->join('subject','curriculum.subject_id = subject.subject_id','left');
+        $this->db->where('course.course_id', $course_id);
+        $this->db->order_by('subject.subject_code');
         return $this->db->get()->result_array();
     }
 

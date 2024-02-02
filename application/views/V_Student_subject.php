@@ -49,8 +49,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- Profile dropdown -->             
             <div class="dropDown">
                 <button class="dropbtn">
-                <img src="<?php echo base_url();?>images/<?= $student_info
-                ['profile_name']?>" alt="profile" style="width: 53px; height: 53px; border-radius: 20px;">   
+                <img src="<?php echo base_url();?>images/<?= $student_info['profile_name'] == "" ? 'profile.png' : $student_info['profile_name'] ?>" alt="profile" style="width: 53px; height: 53px; border-radius: 20px;">   
+                
                 </button>
                 <div class="dropDownContent">
                   <a href="/C_Student_Profile">Profile</a>
