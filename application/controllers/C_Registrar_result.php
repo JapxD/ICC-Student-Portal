@@ -9,7 +9,7 @@ class C_Registrar_result extends CI_Controller {
         if(empty($_SESSION['employee_id'])){
             redirect('C_Employee_Login');
         }
-        $this->load->library('excel');
+       
         $this->load->model('M_Registrar_result');
 
     }
@@ -23,7 +23,7 @@ class C_Registrar_result extends CI_Controller {
             'registrar_info' => $registrar_info,
             'student_info' => $student_info
         );
-		$this->load->view('V_Registrar_students', $data);
+		$this->load->view('V_Registrar_result', $data);
     }
 
     public function studentUpload(){
@@ -56,11 +56,11 @@ class C_Registrar_result extends CI_Controller {
                 'year_level' => $row['G']
             );
 
-            $this->M_Registrar_Dashboard->saveUploadedExcel($insert_array);
+            $this->M_Registrar_result->saveUploadedExcel($insert_array);
         }
 
         $this->session->set_flashdata('message','Save Successful!');
-        redirect('C_Registrar_Dashboard/index');
+        redirect('C_Registrar_result/index');
     
     }
 

@@ -12,17 +12,15 @@ class M_Registrar_result extends CI_Model{
         $this->db->select('last_name');
         $this->db->from('employee');
         $this->db->where('employee_id', $employee_id);
-        return $this->db->get()->result_array()[0];
+        return $this->db->get()->result_array();
     }
     public function fetchStudentInfo($employee_id){
         $this->db->select('students.first_name');
         $this->db->select('students.last_name');
         $this->db->select('students.year_level');
         $this->db->select('course.course_name');
-        $this->db->from('employee');
-        $this->db->join('students','employee.registrar_id = students.registrar_id','left');
         $this->db->join('course','students.course_id = course.course_id','left');
-        $this->db->where('employee_id', $employee_id);
+        $this->db->from('students');
         return $this->db->get()->result_array();
     }
 

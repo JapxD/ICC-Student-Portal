@@ -68,4 +68,15 @@ class C_Registrar_Dashboard extends CI_Controller {
         $this->session->unset_userdata('employee_id');
         redirect($_SERVER['REQUEST_URI'], 'refresh'); 
     }
+    public function search() {
+        $searchName = $this->input->post('searchName');
+
+        // SQL query to search for the name in the database
+        $query = $this->db->query("SELECT * FROM students WHERE first_name LIKE '%$searchName%'");
+
+        // Pass the result to the view
+        $data['results'] = $query->result_array();
+
+        $this->load->view('V_Registrar_result', $data);
+    }
 }
