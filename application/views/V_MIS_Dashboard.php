@@ -31,11 +31,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!--  -->
               <div class="dropDown">
                 <button class="dropbtn">
-                <img src="<?php echo base_url();?>images/<?= $MIS_info['profile_name']?>" alt="profile" style="width: 53px; height: 53px; border-radius: 20px;">   
+                <img src="<?php echo base_url();?>images/<?= $MIS_info['profile_name'] == "" ? 'default_img.png' : $MIS_info['profile_name'] ?>" alt="profile" style="width: 53px; height: 53px; border-radius: 20px;">   
                 </button>
                 <div class="dropDownContent">
                   <a href="/C_MIS_Profile">Profile</a>
-                  <a href="/C_MIS_Dashboard/logout">Log-out</a>
+                  <a href="/C_MIS_Dashboard/logout">Log-out</a> 
                 </div>
               </div>
                 
@@ -47,10 +47,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
     <main>
-      <div class="create">
+      <div class="wellcome"><p>WELCOME MIS HEAD!</p></div>
+      <div class="logo">
+            <img src="images\icc logo.webp" alt="logo">
+            </div>
+      <div id="create1" class="create">
         <form action="/C_Employee_Management/" method=""post>
-          <input type="submit" value="Create Manager Account"> 
+          <input type="submit" value="Create User Account"> 
         </form>
+      </div>
+      <div id="create2" class="create">
         <form action="/C_Student_Management/" method=""post>
           <input type="submit" value="Create Student Account"> 
         </form>

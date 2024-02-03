@@ -7,13 +7,20 @@ class M_Student_Management extends CI_Model{
     }
 
     public function fetchStudent(){
-        $this->db->select('first_name');
-        $this->db->select('last_name');
-        $this->db->select('student_number');
-        $this->db->select('student_id');
-        $this->db->select('profile_name');
-        $this->db->from('students');
-        return $this->db->get()->result_array();  
+
+        
+        $result = $this->db->query('
+        SELECT first_name,
+        last_name,
+        student_number,
+        students.student_id,
+        profile_name
+        FROM
+        students
+        WHERE student_id NOT IN(SELECT student_id from student_user)
+        ');
+        
+        return $result->result_array();  
     }
     
     public function studentCreate($student_id, $password) 

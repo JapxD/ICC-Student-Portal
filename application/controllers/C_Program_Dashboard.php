@@ -6,7 +6,7 @@ class C_Program_Dashboard extends CI_Controller {
     public function __construct(){
         parent::__construct();
         
-        if(empty($_SESSION['employee_id'])){
+        if(empty($_SESSION['employee_id'])){ 
             redirect('C_Employee_Login');
         }
         
@@ -24,10 +24,12 @@ class C_Program_Dashboard extends CI_Controller {
         $employee_id = $this->session->userdata('employee_id');
         $teacher_schedule_info = $this->M_Program_Dashboard->fetchTeacherInfo($employee_id);
         $course_section = $this->M_Program_Dashboard->fetchCourseSection($employee_id);
+        $role_list = $this->M_Program_Dashboard->fetchAccessRoleId($employee_id);
 
         $data = array( 
             'teacher_schedule_info' => $teacher_schedule_info,
-            'course_section' => $course_section
+            'course_section' => $course_section,
+            'role_list' => $role_list 
         );
 
 		$this->load->view('V_Program_Dashboard', $data);

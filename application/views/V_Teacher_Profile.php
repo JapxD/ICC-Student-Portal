@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="<?= base_url(); ?>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css\Header_Profile.css?<?= filemtime('css\Header_Profile.css'); ?>">
@@ -37,11 +37,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
               <div class="dropDown">
                 <button class="dropbtn">
-                <img src="<?php echo base_url();?>images/<?= $MIS_info['profile_name'] == "" ? 'default_img.png' : $MIS_info['profile_name'] ?>" alt="profile" style="width: 53px; height: 53px; border-radius: 20px;"> 
+                <img src="<?php echo base_url();?>images/<?= $Teacher_info['profile_name'] == "" ? 'default_img.png' : $Teacher_info['profile_name'] ?>" alt="profile" style="width: 53px; height: 53px; border-radius: 20px;"> 
                 </button>
                 <div class="dropDownContent">
-                  <a href="/C_Program_Dashboard">Dashboard</a> 
-                  <a href="/C_Program_Profile/logout">Log-out</a>
+                  <a href="/C_Teacher_Dashboard">Dashboard</a> 
+                  <a href="/C_Teacher_Profile/logout">Log-out</a>
                 </div>
               </div>
                 
@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <main>
       <div class="cont">
         <div class="profile">
-          <img src="<?php echo base_url();?>images/<?= $MIS_info['profile_name'] == "" ? 'default_img.png' : $MIS_info['profile_name'] ?>">
+          <img src="<?php echo base_url();?>images/<?= $Teacher_info['profile_name'] == "" ? 'default_img.png' : $Teacher_info['profile_name'] ?>">
         </div>
         
         <div class="profile">
@@ -67,15 +67,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </tr>
             <tr>
               <td><?= $role_list['access_role_name']?></td>
-              <td><?= $MIS_info['first_name']?></td>
-              <td><?= $MIS_info['middle_name']?></td>
-              <td><?= $MIS_info['last_name']?></td> 
+              <td><?= $Teacher_info['first_name']?></td>
+              <td><?= $Teacher_info['middle_name']?></td>
+              <td><?= $Teacher_info['last_name']?></td> 
             </tr>
           </table>
         
 
           <div class="profilePicture">
-            <form action="/C_Program_Profile/imageUpload" method="post" enctype="multipart/form-data">
+            <form action="/C_Teacher_Profile/imageUpload" method="post" enctype="multipart/form-data">
               <label class="pp" for="profile_pic">Select Image for Profile Picture</label>
               <input name="profile_pic" id="profile_pic" type="file">
               <input type="submit" name="submit" value="Upload">
@@ -86,17 +86,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <button id="changepass" onclick="toggleForm()">Change Password?</button>
 
             <!-- <div class="formcon">
-              <form action="/C_MIS_Profile/resetPass" method="post" target="_self">
+              <form action="/C_Teacher_Profile/resetPass" method="post" target="_self">
                 <div class="hide">
                   <input type="password" id="password" name="password" value="123">
                 </div>
                   <input type="submit" value="Reset Password?">
               </form>
-            </div> -->
-          </div>
-
+            </div>
+          </div> -->
+          
           <div class="changePass" >
-            <form action="/C_Program_Profile/changePass" method="post" target="_self">
+            <form action="/C_Teacher_Profile/changePass" method="post" target="_self">
               <input type="password" id="password" name="password" >
               <input type="submit" value="Save">
             </form>

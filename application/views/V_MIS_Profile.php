@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
               <div class="dropDown">
                 <button class="dropbtn">
-                <img src="<?php echo base_url();?>images/<?= $MIS_info['profile_name']?>" alt="profile" style="width: 53px; height: 53px; border-radius: 20px;"> 
+                <img src="<?php echo base_url();?>images/<?= $MIS_info['profile_name'] == "" ? 'default_img.png' : $MIS_info['profile_name'] ?>" alt="profile" style="width: 53px; height: 53px; border-radius: 20px;"> 
                 </button>
                 <div class="dropDownContent">
                   <a href="/C_MIS_Dashboard">Dashboard</a> 
@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <main>
       <div class="cont">
         <div class="profile">
-          <img src="<?php echo base_url();?>images/<?= $MIS_info['profile_name']?>">
+          <img src="<?php echo base_url();?>images/<?= $MIS_info['profile_name'] == "" ? 'default_img.png' : $MIS_info['profile_name'] ?>">
         </div>
         
         <div class="profile">
@@ -68,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <tr>
               <td><?= $role_list['access_role_name']?></td>
               <td><?= $MIS_info['first_name']?></td>
-              <td><?= $MIS_info['middle_name']?></td>
+              <td><?= $MIS_info['middle_name']?></td> 
               <td><?= $MIS_info['last_name']?></td> 
             </tr>
           </table>
@@ -81,18 +81,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <input type="submit" name="submit" value="Upload">
             </form>
           </div>
-          
+           
           <div class="showHide">
-          <button onclick="toggleForm()">Change Password?</button>
+          <button id="changepass" onclick="toggleForm()">Change Password?</button>
 
-            <div class="formcon">
+            <!-- <div class="formcon">
               <form action="/C_MIS_Profile/resetPass" method="post" target="_self">
                 <div class="hide">
                   <input type="password" id="password" name="password" value="123">
                 </div>
                   <input type="submit" value="Reset Password?">
               </form>
-            </div>
+            </div> -->
           </div>
 
           <div class="changePass" >

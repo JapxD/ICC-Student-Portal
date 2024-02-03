@@ -7,9 +7,10 @@ class M_Program_Dashboard extends CI_Model{
     }
 
     public function fetchTeacherInfo($employee_id){
-        $this->db->select('employee.employee_number');
+        $this->db->select('employee.employee_number'); 
         $this->db->select('employee.first_name');
         $this->db->select('employee.last_name');
+        $this->db->select('profile_name');
         $this->db->select('course.course_name');
         $this->db->select('course.course_id');
         $this->db->from('employee');
@@ -17,6 +18,18 @@ class M_Program_Dashboard extends CI_Model{
         $this->db->where('employee.employee_id', $employee_id);
        
         return $this->db->get()->result_array()[0];
+    }
+
+    public function fetchAccessRoleId($employee_id){ 
+        
+        $this->db->select('access_role.access_role_name');
+        $this->db->select('employee_user.access_role_id'); 
+        $this->db->from('employee_user');
+        $this->db->join('access_role', 'employee_user.access_role_id = access_role.access_role_id', 'left'); 
+        $this->db->where('employee_id', $employee_id);
+        $result = $this->db->get();
+
+        return $result->result_array()[0];
     }
 
     public function fetchCourseSection($employee_id){

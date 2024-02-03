@@ -110,7 +110,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <br>
 
-    <div class="p-3 text-sm bg-blue-200">
+    <div class="p-3 text-sm bg-blue-200 rounded">
 <form action="/C_Program_Dashboard/uploadStudentSection" method="post" enctype="multipart/form-data">
     <input type="hidden" name="section_id" value="<?=$section_id?>">
     Select Excel to upload:

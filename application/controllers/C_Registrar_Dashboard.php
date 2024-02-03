@@ -53,8 +53,9 @@ class C_Registrar_Dashboard extends CI_Controller {
                 'middle_name' => $row['C'],
                 'last_name' => $row['D'],
                 'contact_number' => $row['E'],
-                'email_address' => $row['F'],
-                'year_level' => $row['G']
+                'course_code' => $row['F'],
+                'email_address' => $row['G'],
+                'year_level' => $row['H']
             );
 
             $this->M_Registrar_Dashboard->saveUploadedExcel($insert_array); 
