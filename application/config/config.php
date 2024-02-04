@@ -25,7 +25,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['base_url'] = 'http://' . filter_input(INPUT_SERVER, "HTTP_HOST");
 
-/*
+/*   
+
+
+
+
+
+
 |--------------------------------------------------------------------------
 | Index File
 |--------------------------------------------------------------------------
