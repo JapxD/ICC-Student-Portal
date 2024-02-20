@@ -75,7 +75,7 @@ class C_Registrar_result extends CI_Controller {
         $employee_id = $this->session->userdata('employee_id');
 
         // SQL query to search for the name in the database
-        $query = $this->db->query("SELECT * FROM students WHERE first_name LIKE '%$searchName%'");
+        $query = $this->db->query("SELECT * FROM students WHERE student_number LIKE '%$searchName%'");
         
         $registrar_info = $this->M_Registrar_result->fetchRegistrarInfo($employee_id);
 

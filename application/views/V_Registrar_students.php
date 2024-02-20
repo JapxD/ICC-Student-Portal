@@ -90,6 +90,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
         <thead class="bg-gray-200 border-b-2 border-gray-200 ">
             <tr>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center"><pre>STUDENT NUMBER</th>
+
             <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center"><pre>FIRST NAME</th>
 
             <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center"><pre>LAST NAME</th>
@@ -106,6 +108,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php foreach ($student_info as $row): ?>
               
               <tr class="bg-gray-300">
+              <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-center"><?= $row['student_number'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-center"><?= $row['first_name'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-center"><?= $row['last_name'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-center"><?= $row['course_name'] ?></td>

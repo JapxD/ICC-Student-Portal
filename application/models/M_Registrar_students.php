@@ -39,6 +39,7 @@ class M_Registrar_students extends CI_Model{
         return $this->db->get()->result_array()[0];
     }
     public function fetchStudentInfo($employee_id){
+        $this->db->select('students.student_number');
         $this->db->select('students.student_id');
         $this->db->select('students.first_name');
         $this->db->select('students.last_name');

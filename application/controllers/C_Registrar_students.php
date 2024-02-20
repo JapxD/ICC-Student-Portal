@@ -122,7 +122,7 @@ class C_Registrar_students extends CI_Controller {
         $searchName = $this->input->post('searchName');
 
         // SQL query to search for the name in the database
-        $query = $this->db->query("SELECT * FROM students WHERE first_name LIKE '%$searchName%'");
+        $query = $this->db->query("SELECT * FROM students WHERE student_number LIKE '%$searchName%'");
 
         // Pass the result to the view
         $data['results'] = $query->result_array();
