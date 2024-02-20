@@ -86,6 +86,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
         <thead class="bg-gray-200 border-b-2 border-gray-200 ">
             <tr>
+            <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center"><pre>STUDENT NUMBER</th>
+
             <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center"><pre>FIRST NAME</th>
 
             <th class="w-64 p-3 text-sm font-semibold tracking-wide text-center"><pre>LAST NAME</th>
@@ -102,6 +104,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php foreach ($results as $result): ?>
               
               <tr class="bg-gray-300">
+              <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-center"><?= $result['student_number'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-center"><?= $result['first_name'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-center"><?= $result['last_name'] ?></td>
                 <td class="p-3 text-sm whitespace-nowrap class bg-blue-200 text-center"><?= $result['course_id'] == 1 ? 'Bachelor of Science in Computer Science' : ($result['course_id'] == 2 ? 'Bachelor of Science in Information Technology' : ($result['course_id'] == 3 ? 'Bachelor of Science in Business Administration' : '4th Year')) ?></td>
